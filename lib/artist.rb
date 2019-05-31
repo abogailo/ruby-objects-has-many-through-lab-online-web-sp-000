@@ -10,11 +10,11 @@ class Artist
   end
 
    def songs
-    Song.all.select {|song| song.artist == self}
+    Song.all.select {|a_song| a_song.artist == self}
   end
 
    def genres
-    songs.map {|song| song.genre}
+    songs.map {|a_song| a_song.genre}
   end
 
    def self.all
